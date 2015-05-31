@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SVG playground</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="style.css" />
+	<meta charset="utf&mdash;8">
+	<link rel="stylesheet" type="text/css" href="prism/prism.css" data-noprefix />
+</head>
+
+<body>
+	
+	<h4>01 - Tag img - <small>External Css not supported, Link supported</small></h4>
+	<p id='svg_img'>
+		<a href="#">
+			<img src='animation.svg'>
+		</a>
+	</p>
+
+	<pre>
+	    <code class="language-markup">
+	        <script type="prism-html-markup">
+	        	// IMG
+	        	// no external css supported but svg linkable
+
+				<h4>01 - Tag img - <small>External Css not supported, Link supported</small></h4>
+				<p id='svg_img'>
+					<a href="#">
+						<img src='animation.svg'>
+					</a>
+				</p>
+	        </script>
+	    </code>
+	</pre>
+
+	<hr>
+	
+	<h4>02 - Tag embed - <small>External Css supported, Link not supported</small></h4>
+	<p id='svg_embed'>
+		<a href="#">
+			<embed type="image/svg+xml" src="animation.svg" />
+			<!-- <span class="hide">I am not clickable!</span> -->
+		</a>
+	</p>
+
+	<pre>
+	    <code class="language-markup">
+	        <script type="prism-html-markup">
+	        	// EMBED
+	        	// external css supported but no svg linkable
+
+				<h4>02 - Tag embed - <small>External Css supported, Link not supported</small></h4>
+				<p id='svg_embed'>
+					<a href="#">
+						<embed type="image/svg+xml" src="animation.svg" />
+					</a>
+				</p>
+	        </script>
+	    </code>
+	</pre>
+
+	<hr>
+
+	<script type="text/javascript">
+		function AlertIt() {
+			var answer = confirm ("Clicking eh? so you don't trust me")
+				if (answer)
+			window.location="#";
+		}
+	</script>
+
+	<h4>03 - Tag object - <small>External Css supported &amp; SVG clickable</small></h4>
+	<p id='svg_object'>
+		<a href="javascript:AlertIt();" class="link-hover">
+			<object type="image/svg+xml" data="animation.svg">
+				<!-- <img src=''> -->
+			</object>
+		</a>
+	</p>
+
+	<pre>
+	    <code class="language-markup">
+	        <script type="prism-html-markup">
+	        	// OBJECT
+	        	// external css supported and svg linkable
+
+				<h4>03 - Tag object - <small>External Css supported &amp; SVG clickable</small></h4>
+				<p id='svg_object'>
+					<a href="#">
+						<object type="image/svg+xml" data="animation.svg">
+							<!-- <img src=''> -->
+						</object>
+					</a>
+				</p>
+	        </script>
+	    </code>
+	</pre>
+
+	<pre>
+	    <code class="language-css">
+	        <script type="prism-css-markup">
+	        	// CSS
+	        	// for svg linkable
+
+				a {
+				    display: inline-block;
+				}
+
+				object {
+				    pointer-events: none;
+				}
+	        </script>
+	    </code>
+	</pre>
+
+
+    <script type="text/javascript" src="prism/prism.js"></script>
+
+</body>
+</html>
