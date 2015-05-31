@@ -1,0 +1,36 @@
+body {
+	font-family: sans-serif; background-color: #fefefe;
+}
+
+.eye {
+	fill: #0084c8;
+}
+
+.body {
+	fill: #FF0000;
+}
+
+.fur {
+	fill: green;
+}
+
+/*these rules make the svg object clickable*/
+a {
+    display: inline-block;
+}
+
+object {
+    pointer-events: none;
+}
+
+/*.hide {
+	color: transparent;
+}
+.hide:hover {
+	color: #000;
+}*/
+
+svg g#Layer_2 g path.body:hover {
+	fill: orange;
+	transform: scale(0.6);
+}
